@@ -1,0 +1,51 @@
+ion-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    height: 15vh;
+    z-index: -1;
+}
+.header-img{
+    top: 0;
+    width: 300px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.login-container{
+    margin-top: 10px;
+    width: 100%;
+    height: calc(85vh - 10px);
+    border-radius:50px 50px 0 0;
+    -webkit-box-shadow: 0px -1px 8px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px -1px 8px 0px rgba(0,0,0,0.51);
+    box-shadow: 0px -1px 8px 0px rgba(0,0,0,0.51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    padding: 2rem 3rem;
+}
+
+ion-avatar{
+    width: 70px;
+    height: 70px;
+    margin: 1rem;
+}
+
+
+
+form{
+    width: 100%;
+}
+
+.eye-icon{
+    position: absolute;
+    right: 1rem;   
+    font-size: 1.5rem;
+    color: rgb(48, 48, 48);
+    transform: translateY(.25rem);
+    z-index: 100;
+}

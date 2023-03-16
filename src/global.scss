@@ -24,3 +24,47 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.page-title{
+    font-family: 'Kavoon', cursive;
+    font-size: 1.5rem;
+    color: #F79802;
+    margin: 1rem 0;
+}
+
+.login-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border: 0;
+    margin: 1.5rem 0px .5rem 0px;
+    width: 100%;
+    border-bottom: 1px solid #F79802;
+}
+
+.login-input:focus{
+    outline:none
+}
+
+
+.proceed-btn{
+    height: 50px;
+    width: 175px;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    color: #FFFFFF; 
+    background: #F79802;
+}
+
+.proceed-btn {
+    &[disabled] {
+        background: #CCCCCC;
+    }
+}
+
+.error-message{
+    color: #e25959;
+    font-size: .75rem;
+}
