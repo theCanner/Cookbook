@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,9 @@ export class LoginPage implements OnInit {
   password : string = ''
   emailInvalid : boolean = false
   disableButton :boolean = true
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
 
   ngOnInit() {
   }
@@ -20,6 +23,7 @@ export class LoginPage implements OnInit {
   validateEmail(e:any){
     if (!this.email.match((/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))){
       this.emailInvalid = true
+      this.validateField()
       return
     }else { 
       this.emailInvalid = false
@@ -38,7 +42,7 @@ export class LoginPage implements OnInit {
   }
   
 
-  loggedIn(){
-    console.log('loggedin')
+  proceed(){
+    this.router.navigate(['/dashboard'])
   }
 }

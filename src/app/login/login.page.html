@@ -1,12 +1,11 @@
-<ion-header>
+<ion-header class="ion-no-border">
     <img src="/assets/images/header.png" class="header-img">
 </ion-header>
-<ion-content>
 
  <div class="login-container">
-  <p class="page-title"> Cookbook </p>
+  <p class="logo-title"> Cookbook </p>
   <ion-avatar>
-    <img alt="Silhouette of a person's head" src="/assets/icon/avatar.png" />
+    <img alt="header image" src="/assets/icon/avatar.png" />
   </ion-avatar>
 
     <input type="text" placeholder="Email" class="login-input" [(ngModel)]="email" (keyup)="validateEmail($event)">
@@ -23,7 +22,7 @@
     </div>
     
     <div style="width:100%;display: flex; justify-content: end;">
-      <button slot="end" class="proceed-btn" [disabled]="disableButton" (click)="loggedIn()">Sign In</button>
+      <button slot="end" class="proceed-btn" [disabled]="disableButton" (click)="proceed()">Proceed</button>
     </div>
     
     <p style="margin-top: 5rem; color:#F79802; font-size: .75rem;" >Sign Up an Account</p>
@@ -32,4 +31,3 @@
     <ion-icon name="finger-print" style="margin-top: 3rem; font-size:3rem;opacity: .5;"></ion-icon>
     <p style="color:#F79802; font-size: .75rem;" >Sign In Using TouchID</p>
  </div>
-</ion-content>

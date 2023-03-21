@@ -26,10 +26,34 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-.page-title{
+body{
+    font-family: 'Almarai', sans-serif;
+}
+.logo-title{
     font-family: 'Kavoon', cursive;
     font-size: 1.5rem;
-    color: #F79802;
+    color: #F39D4D;
+    margin: 1rem 0;
+}
+
+
+.page-title{
+    font-size: 1.25rem;
+    font-weight:700;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.md-font{
+    font-size: 14px;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.header-title{
+    font-family: 'Kavoon', cursive;
+    font-size: 1.5rem;
+    color: #F39D4D;
     margin: 1rem 0;
 }
 
@@ -41,7 +65,7 @@
     border: 0;
     margin: 1.5rem 0px .5rem 0px;
     width: 100%;
-    border-bottom: 1px solid #F79802;
+    border-bottom: 1px solid #F39D4D;
 }
 
 .login-input:focus{
@@ -55,7 +79,7 @@
     margin-top: 1.5rem;
     border-radius: 10px;
     color: #FFFFFF; 
-    background: #F79802;
+    background: #F39D4D;
 }
 
 .proceed-btn {
@@ -67,4 +91,23 @@
 .error-message{
     color: #e25959;
     font-size: .75rem;
+}
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+.item-center{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,50%);
 }
