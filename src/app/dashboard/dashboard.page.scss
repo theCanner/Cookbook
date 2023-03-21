@@ -1,0 +1,103 @@
+.recent-container{
+    position: relative;
+    border-radius: 20px;
+    width: 100px;
+    height: 120px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.51);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.51);
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+
+.recent-img{
+    width: 50px;
+    height: auto;
+}
+
+.recipe-img{
+    position: absolute;
+    right: .5rem;
+    width: 90px;
+    height: auto;
+    z-index: -1;
+}
+.small-circle{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #F39D4D;
+    transform: translateY(-165%);
+    z-index:  -2;
+}
+
+
+.big-circle{
+    right: 0;
+    position: absolute;
+    width:210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: #F39D4D;
+    transform: translate(50%,2%);
+    z-index:  -2;
+}
+
+.full-width{
+    width: 100%;
+    padding: 1rem;
+}
+
+
+
+
+.seperator{
+    height:1px;
+    width:50%; 
+    background-color:#F39D4D;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.short-desc{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 210px;
+    padding: .75rem 0;
+    font-size:.75rem;
+    margin: 0;    
+}
+
+.ratings-container{
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input{
+    width: 200px;
+    border: 0px;
+    border-radius: 50px;
+    background: #dfdfdf;
+    font-size: .75rem;
+    height: 40px;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.search-input:focus{
+    outline:none
+}
+
+.search-container{
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

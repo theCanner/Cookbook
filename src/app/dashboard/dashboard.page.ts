@@ -12,4 +12,7 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
   }
 
+  search(){
+    console.log('yes')
+  }
 }

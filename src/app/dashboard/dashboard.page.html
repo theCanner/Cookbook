@@ -1,9 +1,71 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <app-header></app-header>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<div style="padding:1rem;height: 100%;">
+  <!-- <p class="page-title">Dashboard</p> -->
+  
+  <div>
+    <p class="md-font bold">Recently Open</p>
+    <ion-col style="padding: 0 1rem; display: flex;justify-content: space-evenly;">
 
-</ion-content>
+      <ion-row class="recent-container flex-center">
+        
+        <img  alt="dish" src="/assets/images/dish1.png" class="recent-img">
+        <p class="md-font">Sample Dish 1</p>
+        <div class="small-circle">
+        </div>
+      </ion-row>
+
+      <ion-row class="recent-container flex-center">
+        
+        <img  alt="dish" src="/assets/images/dish2.png" class="recent-img">
+        <p class="md-font">Sample Dish 1</p>
+        <div class="small-circle">
+        </div>
+      </ion-row>
+
+      <ion-row class="recent-container flex-center">
+        
+        <img  alt="dish" src="/assets/images/dish1.png" class="recent-img">
+        <p class="md-font">Sample Dish 1</p>
+        <div class="small-circle">
+        </div>
+      </ion-row>
+
+    </ion-col>
+
+    <hr class="seperator">
+    <div class="search-container">
+      <p class="md-font bold">Recipes</p>
+
+      <div style="display:flex; flex-direction:row; align-items:center">
+        <div style="position: relative;">
+          <input type="text" placeholder="Name,Ingredients ...." class="search-input">
+          <ion-icon name="search" style="font-size: 25px; transform: translate(-115%,25%); color: #7e7c7c; position: absolute;" (click)="search()"></ion-icon>
+        </div>
+        <ion-icon name="filter" style="font-size:1.5rem;padding-left: 10px;"></ion-icon>
+      </div>
+      
+      
+    </div>
+    
+    <ion-col style="display: flex;justify-content: space-evenly; width: 100%;">
+
+      <ion-row class="recent-container full-width "  style="margin-top: 1rem; display: flex; flex-direction: column; flex-wrap: nowrap;">
+        <img  alt="dish" src="/assets/images/dish1.png" class="recipe-img">
+        <div class="big-circle"></div>
+        <p class="md-font bold" style="padding: 0;">Sample Dish 1</p>
+        <p  class="short-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
+        <div class="ratings-container">
+        <p class="short-desc" style="padding: 0;">Ratings: 5.0<span><ion-icon name="star" style="color:#F39D4D;padding-left:5px;transform: translateY(1px);"></ion-icon></span></p>
+        <p class="short-desc" ><span><ion-icon name="hourglass-outline" style="padding-left:5px;transform: translateY(1px);"></ion-icon></span> 1 hr(s)</p>
+        </div>
+        
+      </ion-row>
+
+    </ion-col>
+
+</div>
