@@ -1,0 +1,12 @@
+<ion-header  class="ion-no-border" style="background-color:transparent;">
+  <ion-toolbar>
+    <ion-icon name="close-outline" slot="end" style="font-size: 2rem; color:#F39D4D ;" (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding: 1rem;">
+    <p class="logo-title flex-center">{{recipes.name}}</p>
+    <img src="{{recipes.image}}" style="width:10rem;" class="item-center-vertical">
+    <p style="padding: 1rem;">{{recipes.description}}</p>
+
+</ion-content>
