@@ -7,8 +7,28 @@
   <ion-avatar>
     <img alt="header image" src="/assets/icon/avatar.png" />
   </ion-avatar>
+    <form [formGroup]="loginForm">
+  
+    <input type="text" placeholder="Email" class="login-input" formControlName="email" (keyup)="validateEmail($event)">
+    <span class="error-message" style="width:100%" *ngIf="f.email.invalid && (f.email.touched || f.email.dirty) ">Please enter valid email</span>
 
-    <input type="text" placeholder="Email" class="login-input" [(ngModel)]="email" (keyup)="validateEmail($event)">
+    <input type="password" placeholder="Password" class="login-input" formControlName="password" (keyup)="validateField()" autocomplete="off">
+    <span class="error-message" style="width:100%" *ngIf="f.password.invalid && (f.password.touched || f.password.dirty)">Please enter valid password</span>
+    <div style="display: flex; flex-direction: row; width: 100%; justify-content:space-between; font-size: .75rem;;margin-top: 10px;">
+      <div style="display: flex; align-items: center;"> 
+      <input type="checkbox" id="vehicle3" name="remember" value="" style="color: #F79802;">
+      <label for="remember" style="color:#F79802; margin-left: .5rem;"> Remember Me</label>
+      </div>
+      
+      <p style="margin: 0; color:#F79802;" >Forgot Password?</p>
+    </div>
+    
+    <div style="width:100%;display: flex; justify-content: end;">
+      <button slot="end" class="proceed-btn" [disabled]="!loginForm.valid" (click)="proceed()">Proceed</button>
+    </div>
+
+    </form>
+    <!-- <input type="text" placeholder="Email" class="login-input" [(ngModel)]="email" (keyup)="validateEmail($event)">
     
     <span class="error-message" style="width:100%" *ngIf="emailInvalid">Please enter valid email</span>
     <input type="password" placeholder="Password" class="login-input" [(ngModel)]="password" (keyup)="validateField()">
@@ -23,7 +43,7 @@
     
     <div style="width:100%;display: flex; justify-content: end;">
       <button slot="end" class="proceed-btn" [disabled]="disableButton" (click)="proceed()">Proceed</button>
-    </div>
+    </div> -->
     
     <p style="margin-top: 5rem; color:#F79802; font-size: .75rem;" >Sign Up an Account</p>
 
