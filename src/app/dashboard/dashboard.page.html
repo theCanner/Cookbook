@@ -9,10 +9,10 @@
   
   <div>
     <p class="md-font bold">Recently Open</p>
-    <div style="position: relative; height: 70px; width: 100%;" class="flex-center">
+    <!-- <div style="position: relative; height: 70px; width: 100%;" class="flex-center">
       <img src="/assets/icon/no-recipe.svg" alt="no recipe" class="no-recipe small">
-  </div>
-    <!-- <ion-col style="padding: 0 1rem; display: flex;justify-content: space-evenly;">
+  </div> -->
+    <ion-col style="padding: 0 1rem; display: flex;justify-content: space-evenly;">
 
       <ion-row class="recent-container flex-center">
         
@@ -38,7 +38,7 @@
         </div>
       </ion-row>
 
-    </ion-col> -->
+    </ion-col>
 
     <hr class="seperator">
     <div class="search-container">
@@ -56,23 +56,28 @@
     </div>
     
     <!--No Recipes Provided-->
-    <div style="position: relative; height: 200px; width: 100%;" class="flex-center">
+    <!-- <div style="position: relative; height: 200px; width: 100%;" class="flex-center">
         <img src="/assets/icon/no-recipe.svg" alt="no recipe" class="no-recipe">
+    </div> -->
+    <div *ngFor="let recipe of recipes">
+      <ion-col style="display: flex;justify-content: space-evenly; width: 100%;" (click)="viewRecipe(recipe)">
+
+        <ion-row class="recent-container full-width "  style="margin-top: 1rem; display: flex; flex-direction: column; flex-wrap: nowrap;">
+          <img  alt="dish" src="{{recipe.image}}" class="recipe-img">
+          <div class="big-circle"></div>
+          <p class="md-font bold" style="padding: 0;">{{recipe.name}}</p>
+          <p  class="short-desc"> {{recipe.description}} </p>
+          <div class="ratings-container">
+          <p class="short-desc" style="padding: 0;">Ratings: {{recipe.ratings}}<span><ion-icon name="star" style="color:#F39D4D;padding-left:5px;transform: translateY(1px);"></ion-icon></span></p>
+          <p class="short-desc" ><span><ion-icon name="hourglass-outline" style="padding-left:5px;transform: translateY(1px);"></ion-icon></span> {{recipe.time}} hr(s)</p>
+          </div>
+          
+        </ion-row>
+  
+      </ion-col>
+  
+
     </div>
-    <!-- <ion-col style="display: flex;justify-content: space-evenly; width: 100%;">
-
-      <ion-row class="recent-container full-width "  style="margin-top: 1rem; display: flex; flex-direction: column; flex-wrap: nowrap;">
-        <img  alt="dish" src="/assets/images/dish1.png" class="recipe-img">
-        <div class="big-circle"></div>
-        <p class="md-font bold" style="padding: 0;">Sample Dish 1</p>
-        <p  class="short-desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
-        <div class="ratings-container">
-        <p class="short-desc" style="padding: 0;">Ratings: 5.0<span><ion-icon name="star" style="color:#F39D4D;padding-left:5px;transform: translateY(1px);"></ion-icon></span></p>
-        <p class="short-desc" ><span><ion-icon name="hourglass-outline" style="padding-left:5px;transform: translateY(1px);"></ion-icon></span> 1 hr(s)</p>
-        </div>
-        
-      </ion-row>
-
-    </ion-col> -->
+    
 
 </div>
