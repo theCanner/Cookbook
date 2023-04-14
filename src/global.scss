@@ -112,6 +112,12 @@ body{
     transform: translate(50%,50%);
 }
 
+.item-center-vertical{
+    right: 0;
+    top: 0;
+    transform: translateX(75%);
+}
+
 
 .no-recipe{
     opacity: .32;
